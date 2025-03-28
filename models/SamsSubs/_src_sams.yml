@@ -6,13 +6,13 @@ sources:
     schema: samssubs_source
     tables:
       - name: web_traffic_events
-  - name: samssubs_landing
+  - name: subs_source_landing
     database: michaelmartinez
     schema: samssubs_source_sams_subs
     tables:
       - name: customer
       - name: employee
-      - name: order
+      - name: orders
       - name: orderdetails
       - name: product
       - name: sandwich

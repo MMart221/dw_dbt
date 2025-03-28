@@ -1,0 +1,18 @@
+{{ config(
+    materialized = 'table',
+    schema = 'dw_samssubs'
+    )
+}}
+
+with cte_date as (
+{{ dbt_date.get_date_dimension("1990-01-01", "2050-12-31") }}
+)
+
+SELECT
+date_day as DateKey,
+date_day AS Day,
+day_of_week AS DayofWeek,
+month_of_year AS Month,
+quarter_of_year AS Quarter,
+year_number AS Year
+from cte_date
